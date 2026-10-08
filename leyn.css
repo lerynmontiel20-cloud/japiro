@@ -1,0 +1,257 @@
+/* Reseteo y variables de color */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #0f172a;       /* Azul oscuro muy elegante */
+    --secondary-color: #1e293b;     /* Azul grisáceo */
+    --accent-color: #eab308;        /* Amarillo vibrante y moderno */
+    --accent-hover: #ca8a04;        /* Amarillo oscuro para hover */
+    --bg-color: #f8fafc;            /* Fondo general claro */
+    --card-bg: #ffffff;             /* Fondo de tarjetas */
+    --text-color: #334155;          /* Texto principal */
+    --border-color: #e2e8f0;        /* Bordes suaves */
+}
+
+body {
+    font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    scroll-behavior: smooth;
+}
+
+/* Encabezado con diseño moderno */
+header {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 3rem 1rem 2rem 1rem;
+    text-align: center;
+    border-bottom: 4px solid var(--accent-color);
+}
+
+.header-content h1 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    color: #94a3b8;
+    margin-bottom: 1.5rem;
+}
+
+/* Caja de información del estudiante */
+.student-info {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    display: inline-block;
+    padding: 1.2rem 2.5rem;
+    border-radius: 12px;
+    text-align: left;
+    margin-bottom: 2rem;
+    backdrop-filter: blur(5px);
+}
+
+.student-info p {
+    margin: 0.3rem 0;
+    font-size: 1rem;
+    color: #e2e8f0;
+}
+
+.student-info strong {
+    color: var(--accent-color);
+}
+
+/* Barra de navegación fija y moderna */
+nav {
+    background: var(--secondary-color);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0.5rem;
+}
+
+nav a {
+    color: #cbd5e1;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    color: var(--accent-color);
+    background: rgba(234, 179, 8, 0.1);
+}
+
+/* Contenedor Principal */
+main {
+    max-width: 1000px;
+    margin: 2.5rem auto;
+    padding: 0 1.5rem;
+}
+
+/* Tarjetas de sección */
+.card {
+    background: var(--card-bg);
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    border: 1px solid var(--border-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 1.2rem;
+    font-size: 1.75rem;
+    position: relative;
+    padding-bottom: 0.6rem;
+}
+
+/* Línea decorativa amarilla en los títulos de las tarjetas */
+.card h2::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 60px;
+    height: 4px;
+    background-color: var(--accent-color);
+    border-radius: 2px;
+}
+
+/* Cuadrícula de Conceptos Fundamentales */
+.grid-conceptos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.concept-item {
+    background: #f1f5f9;
+    border-top: 4px solid var(--accent-color);
+    padding: 1.5rem;
+    border-radius: 8px;
+    transition: transform 0.2s;
+}
+
+.concept-item:hover {
+    transform: translateY(-3px);
+}
+
+.concept-item h3 {
+    font-size: 1.15rem;
+    color: var(--primary-color);
+    margin-bottom: 0.6rem;
+}
+
+/* Estilo para las preguntas del Cuestionario */
+.question {
+    background: #fafaf9;
+    border-left: 4px solid var(--accent-color);
+    padding: 1.2rem 1.5rem;
+    margin-bottom: 1.2rem;
+    border-radius: 0 8px 8px 0;
+}
+
+.question h3 {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.question p {
+    color: var(--text-color);
+    font-size: 0.95rem;
+}
+
+/* Listas y Enlaces */
+ul {
+    padding-left: 1.5rem;
+}
+
+ul li {
+    margin-bottom: 0.6rem;
+}
+
+a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: var(--accent-hover);
+    text-decoration: underline;
+}
+
+/* Pie de página */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background: var(--primary-color);
+    color: #94a3b8;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--accent-color);
+    margin-top: 4rem;
+}
+
+footer p {
+    color: #e2e8f0;
+}
+
+/* Diseño responsivo para celulares */
+@media (max-width: 768px) {
+    .header-content h1 {
+        font-size: 2rem;
+    }
+    
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.2rem;
+    }
+
+    nav a {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .student-info {
+        width: 100%;
+        text-align: center;
+        padding: 1rem;
+    }
+
+    .card {
+        padding: 1.5rem;
+    }
+}
